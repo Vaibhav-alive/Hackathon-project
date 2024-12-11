@@ -204,8 +204,8 @@ body{
     border: 1px solid #fff; /*pass*/
     margin: 12px;
     width: 50%;
-    padding: 12px;
     border-radius: 12px;
+    padding: 12px;
 }
 .banner{
     text-align: center;
@@ -215,6 +215,7 @@ body{
     background-color: red;
     padding: 20px;
     border-radius: 12px;
+    gap: 15px;
 }
 .solutions{
     width: 50%;
@@ -231,7 +232,7 @@ body{
     width: 90%;
     border: 1px solid #fff; /*pass*/
     border-radius: 12px;
-    gap: 20px;
+    gap: 60px;
     padding: 20px;
     background-color: #fff;
 }
@@ -262,4 +263,42 @@ body{
     gap: 20px;
     padding: 20px;
     background-color: #fff;
+}
+.a-text{
+    letter-spacing: 10px;
+    white-space: nowrap;
+   
+    overflow: hidden;
+    animation: 
+        typing 2s,
+        cursor .4s step-end infinite alternate;
+}
+@keyframes cursor{
+    50% {
+        border-color: transparent;
+    }
+}
+@keyframes typing{
+    from { width: 0 }
+    to {
+        width: 100%
+    }
+    100%{
+        border: none;
+    }
+}
+.ma-text{
+   
+    overflow: hidden;
+    animation: 
+        typing 2s,
+        cursor .2s step-end infinite alternate;
+}
+.da-text{
+    letter-spacing: 10px;
+    overflow: hidden;
+    animation: 
+        typing 2s,
+        cursor .2s step-end infinite alternate;
+    animation-delay: 10px;
 }
