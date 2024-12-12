@@ -50,7 +50,6 @@ body{
     justify-content: center;
 }
 .card{
-    
     background-image: url(https://b2bblogassets.airtel.in/wp-content/uploads/2022/05/futuristic-smart-city-with-iot-scaled.jpg);
     width: 100%;
     border: 1px solid white;
@@ -88,10 +87,23 @@ body{
     border-radius: 6px ;
     cursor: pointer;
     padding: 10px;
+  
+    animation: btn-appear 1.6s linear;
+}
+@keyframes btn-appear{
+    from{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 
+
 .modal {
-   display: none;
+   display: none;  
    width: 400px;
    z-index: 2;
    border: 1px solid white;
@@ -122,8 +134,7 @@ body{
   }
 
   .overlay {
-    background: black;
-    
+    filter: blur(13px);
     z-index: 1;
   }
 .modal button{
@@ -275,7 +286,7 @@ body{
     width: 90%;
     border: 1px solid #fff; /*pass*/
     border-radius: 12px;
-    gap: 20px;
+    gap: 80px;
     padding: 20px;
     background-color: #fff;
 }
@@ -286,8 +297,10 @@ body{
     overflow: hidden;
     animation: 
         typing 2s,
-        cursor .4s step-end infinite alternate;
-   
+        cursor 4s step-end infinite alternate;
+    animation-timeline: view();
+    
+    animation-range-end: 300px;  
 }
 @keyframes cursor{
     50% {
@@ -304,3 +317,19 @@ body{
     }
 }
 
+.da-text{
+    letter-spacing: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: 
+        typing 2s,
+        cursor .4s step-end infinite alternate;
+}
+.n-text{
+    letter-spacing: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: 
+        typing 2s,
+        cursor .4s step-end infinite alternate;
+}

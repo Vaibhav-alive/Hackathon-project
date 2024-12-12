@@ -1,10 +1,12 @@
 function show() {
     const modal = document.getElementById('myModal');
-    modal.style.display = 'block';
-    let container = document.getElementById('p-align')
+    modal.style.display = 'block'
+    const container = document.getElementById('container')
     container.classList.add('overlay')
-    let container2 = document.getElementById('m-container')
+    const container2 = document.getElementById('m-container')
     container2.classList.add('overlay')
+    const table = document.getElementById('table')
+    table.classList.add('overlay')
 }
 
  
@@ -13,9 +15,12 @@ function show() {
     span.onclick = function() {
         let modal = document.getElementById('myModal');
         modal.style.display = 'none';
-       let container = document.getElementById('p-align')
+       let container = document.getElementById('container')
        container.classList.remove('overlay')
        let container2 = document.getElementById('m-container')
         container2.classList.remove('overlay')
+        let table = document.getElementById('table')
+        table.classList.remove('overlay')
     }
 });
+
