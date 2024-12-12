@@ -50,6 +50,7 @@ body{
     justify-content: center;
 }
 .card{
+    
     background-image: url(https://b2bblogassets.airtel.in/wp-content/uploads/2022/05/futuristic-smart-city-with-iot-scaled.jpg);
     width: 100%;
     border: 1px solid white;
@@ -60,8 +61,22 @@ body{
     color: white;
     text-shadow:0 0 10px white;
     box-shadow: 0 2px 70px 1px #ffffff24;
+    animation: appear 1s linear;
+  
+ 
 }
-
+@keyframes appear{
+    from{
+        opacity: 0;
+        transform: translateX(-100px);
+        
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+        
+    }
+}
 .btn{
     width: 200px;
    font-weight: 700;
@@ -264,14 +279,15 @@ body{
     padding: 20px;
     background-color: #fff;
 }
+
 .a-text{
     letter-spacing: 10px;
     white-space: nowrap;
-   
     overflow: hidden;
     animation: 
         typing 2s,
         cursor .4s step-end infinite alternate;
+   
 }
 @keyframes cursor{
     50% {
@@ -287,18 +303,4 @@ body{
         border: none;
     }
 }
-.ma-text{
-   
-    overflow: hidden;
-    animation: 
-        typing 2s,
-        cursor .2s step-end infinite alternate;
-}
-.da-text{
-    letter-spacing: 10px;
-    overflow: hidden;
-    animation: 
-        typing 2s,
-        cursor .2s step-end infinite alternate;
-    animation-delay: 10px;
-}
+
