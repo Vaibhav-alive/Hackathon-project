@@ -220,7 +220,7 @@ body{
     width: 100%;
     display: flex;
     gap: 12px;
-    border: 1px solid #fff;
+   
     padding: 12px;
     margin-top: 12px;
 }

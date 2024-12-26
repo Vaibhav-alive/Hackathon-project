@@ -1,16 +1,28 @@
+// JavaScript Part
+function closeModal() {
+    let modal = document.getElementById('myModal');
+    modal.style.display = 'none';
+    let container = document.getElementById('container');
+    container.classList.remove('overlay');
+    let container2 = document.getElementById('m-container');
+    container2.classList.remove('overlay');
+    let table = document.getElementById('table');
+    table.classList.remove('overlay');
+   
+}
+   function show(){
+    let modal = document.getElementById('myModal');
+    modal.style.display = 'block';
+    let container = document.getElementById('container');
+    container.classList.add('overlay');
+    let container2 = document.getElementById('m-container');
+    container2.classList.add('overlay');
+    let table = document.getElementById('table');
+    table.classList.add('overlay');
+}
 document.addEventListener('DOMContentLoaded', function() {
-    let span = document.getElementById('btn');
-    span.onclick = function() {
-        let modal = document.getElementById('myModal');
-        modal.style.display = 'none';
-        let container = document.getElementById('container');
-        container.classList.remove('overlay');
-        let container2 = document.getElementById('m-container');
-        container2.classList.remove('overlay');
-        let table = document.getElementById('table');
-        table.classList.remove('overlay');
-    }
-
+    
+    
     // Select all elements with the class 'card-1', 'card', 'table', 'adv', 'dis', and 'btn'
     const elementsToAnimate = document.querySelectorAll('.main-container .card-1, .card, .table, .adv, .dis, .btn');
     
