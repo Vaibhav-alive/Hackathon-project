@@ -267,6 +267,14 @@ body{
     padding: 6px;
     border-radius: 12px;
     box-shadow: inset 0 2px 70px 1px #ffffff24;
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start slightly below */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+}
+
+.card-1.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to original position */
 }
 .head{
     text-align: center;

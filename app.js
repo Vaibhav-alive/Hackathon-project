@@ -22,5 +22,25 @@ function show() {
         let table = document.getElementById('table')
         table.classList.remove('overlay')
     }
+
+    // Select all elements with the class 'card-1' inside the main-container
+const cards = document.querySelectorAll('.main-container .card-1');
+
+// Create an intersection observer
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Add the 'visible' class to trigger the animation
+            entry.target.classList.add('visible');
+            // Optionally, unobserve the element after it has been animated
+            observer.unobserve(entry.target);
+        }
+    });
+});
+
+// Start observing each card
+cards.forEach(card => {
+    observer.observe(card);
+});
 });
 
