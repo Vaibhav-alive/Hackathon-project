@@ -60,7 +60,7 @@ body{
     color: white;
     text-shadow:0 0 10px white;
     box-shadow: 0 2px 70px 1px #ffffff24;
-    animation: appear 1s linear;
+   
   
  
 }
@@ -88,7 +88,7 @@ body{
     cursor: pointer;
     padding: 10px;
   
-    animation: btn-appear 1.6s linear;
+   
 }
 @keyframes btn-appear{
     from{
@@ -252,6 +252,7 @@ body{
     gap: 10px;
     border-radius: 12px;
 }
+
 .real-problems{
     display: flex;
     flex-direction: column;
@@ -299,17 +300,7 @@ body{
     background-color: #fff;
 }
 
-.a-text{
-    letter-spacing: 10px;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: 
-        typing 2s,
-        cursor 4s step-end infinite alternate;
-    animation-timeline: view();
-    
-    animation-range-end: 300px;  
-}
+
 @keyframes cursor{
     50% {
         border-color: transparent;
@@ -340,4 +331,21 @@ body{
     animation: 
         typing 2s,
         cursor .4s step-end infinite alternate;
+}
+/* Existing styles for visible state */
+.card, .table, .adv, .dis, .btn {
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start slightly below */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+}
+
+.card.visible, .table.visible, .adv.visible, .dis.visible, .btn.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to original position */
+}
+
+/* Fade out styles */
+.card.fade-out, .table.fade-out, .adv.fade-out, .dis.fade-out, .btn.fade-out {
+    opacity: 0; /* Fully transparent */
+    transform: translateY(20px); /* Move slightly down */
 }
