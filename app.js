@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }, {
-        threshold: 0.1 // Trigger when 50% of the element is in view
+        threshold: 0.2 
     });
 
     // Start observing each element
